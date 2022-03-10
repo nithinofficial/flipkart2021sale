@@ -1,4 +1,3 @@
-
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -12,8 +11,10 @@ spec:
       labels:
         name: springboot
     spec:
+      imagePullSecrets:
+      - name: dockerreposecret
       containers:
-      - image: nithindockerhub1/kubernetesproject-pipeline
+      - image: 172.31.43.54:8083/spring-boot-mongo
         name: springboot
         ports:
         - name: springboot
