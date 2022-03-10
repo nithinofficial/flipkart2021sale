@@ -11,10 +11,8 @@ spec:
       labels:
         name: springboot
     spec:
-      imagePullSecrets:
-      - name: dockerreposecret
       containers:
-      - image: 172.31.43.54:8083/spring-boot-mongo
+      - image: nithindockerhub1/kubernetesproject-pipeline
         name: springboot
         ports:
         - name: springboot
